@@ -1,0 +1,172 @@
+.backdrop-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: visibility 500ms linear, opacity 500ms linear;
+}
+.modal {
+  position: absolute;
+  background-color: $white-color;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  width: 528px;
+  height: 581px;
+  top: 221px;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+  transform: scale(1);
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $white-color;
+    margin: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 1);
+  }
+}
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+
+  & .modal {
+    transform: scale(0);
+  }
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+
+  &__header {
+    color: $brand-color;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  &__label {
+    color: $secondary-color;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: Left;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+  }
+
+  &__box {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    padding-left: 42px;
+
+    &:focus + .modal-form__svg {
+      fill: $focus-color;
+    }
+
+    &:focus {
+      outline: 0;
+      border: 1px solid $focus-color;
+    }
+  }
+
+  &__textarea {
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    height: 120px;
+    margin-bottom: 20px;
+
+    &:focus {
+      outline: 0;
+      border: 1px solid $focus-color;
+    }
+
+    &::placeholder {
+      font-size: 12px;
+      line-height: 14px;
+      text-align: Left;
+      letter-spacing: 0.01em;
+    }
+  }
+  &__svg {
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__button {
+    @extend %button;
+    margin: 0 auto;
+  }
+}
+.statute {
+  color: $secondary-color;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+
+  & .statute__input {
+    appearance: none;
+    background: $white-color;
+    margin: 0;
+    border: 2px solid $black-color;
+    border-radius: 4px;
+    width: 16px;
+    height: 15px;
+  }
+
+  & .statute__input:checked + .checkbox-svg {
+    opacity: 1;
+    fill: $white-color;
+  }
+
+  &__links {
+    color: $focus-color;
+  }
+}
+.checkbox-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  opacity: 0;
+  background-color: $focus-color;
+  border-radius: 4px;
+  width: 16px;
+  height: 15px;
+}

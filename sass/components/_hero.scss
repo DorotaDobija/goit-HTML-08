@@ -1,0 +1,34 @@
+.title {
+  background-color: $main-background-color;
+
+  &__box {
+    max-width: 1600px;
+    background-image: linear-gradient(to top, $title-background-color, $title-background-color),
+      url('../images/backgroundpic.jpg');
+    background-position: center;
+    margin: 0 auto;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 200px 0;
+  }
+
+  &__text {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $white-color;
+  }
+
+  &__button {
+    @extend %button;
+  }
+}

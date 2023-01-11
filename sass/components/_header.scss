@@ -1,0 +1,109 @@
+.site-nav {
+  border-bottom: 1px solid #ececec;
+}
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-family: $secondary-font-family;
+  font-weight: 700;
+  font-size: 26px;
+  text-decoration: none;
+  color: $black-color;
+
+  &__web {
+    color: $focus-color;
+  }
+}
+.nav-box {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    gap: 46px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-left: 93px;
+
+    &-item {
+      font-family: $main-font-family;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1, 1;
+      letter-spacing: 0.02em;
+      color: $brand-color;
+    }
+
+    &-link {
+      color: $brand-color;
+      text-decoration: none;
+      transition-property: color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+        color: $focus-color;
+        text-decoration: none;
+      }
+
+      &--active {
+        position: relative;
+        color: $focus-color;
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 53px;
+          height: 4px;
+          top: 44px;
+          background-color: $focus-color;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+}
+.contact-box {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  gap: 50px;
+
+  &__icon {
+    fill: $secondary-color;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__links {
+    font-family: $main-font-family;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    color: $secondary-color;
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $focus-color;
+      text-decoration: none;
+    }
+    &:hover > .contact-box__icon,
+    &:focus > .contact-box__icon {
+      fill: $focus-color;
+    }
+  }
+}
