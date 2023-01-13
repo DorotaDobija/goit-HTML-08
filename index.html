@@ -25,6 +25,15 @@
       <!-- NAV BOX -->
       <div class="site-nav">
         <div class="container header-box">
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="24" height="16">
+              <use href="images/icons.svg#icon-menu_24px"></use>
+            </svg>
+          </button>
           <nav class="nav-box">
             <a class="logo" href="index.html"><span class="logo__web">Web</span>Studio</a>
             <ul class="list nav-box__list">
@@ -437,6 +446,19 @@
         </div>
       </section>
     </main>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg width="40" height="40">
+          <use href="images/icons.svg#icon-close_40px"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu">
+        <li><a href="index.html" class="link">About</a></li>
+        <li><a href="portfolio.html" class="link">Portfolio</a></li>
+        <li><a href="#" class="link">Kontakt</a></li>
+      </ul>
+    </div>
+
     <!-- FOOTER BOX -->
     <footer class="footer-section">
       <section class="container footer-section__box">
@@ -583,5 +605,12 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
