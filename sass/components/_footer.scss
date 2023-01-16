@@ -4,8 +4,14 @@
   &__box {
     display: flex;
     flex-wrap: wrap;
-    justify-items: space-between;
+    justify-content: center;
     gap: 70px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-section__box {
+    justify-content: space-between;
   }
 }
 .footer-logo {
@@ -42,7 +48,15 @@
   text-transform: uppercase;
   font-size: 14px;
   line-height: 16px;
+  text-align: center;
 }
+
+@media screen and (min-width: 1200px) {
+  .footer-header {
+    text-align: left;
+  }
+}
+
 .footer-icons {
   padding-top: 72px;
 
@@ -79,12 +93,14 @@
 
   &__label {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 12px;
     margin-top: 20px;
   }
 
   &__input {
-    width: 358px;
+    max-width: 400px;
     height: 50px;
     background-color: $main-background-color;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -105,5 +121,16 @@
     justify-content: center;
     align-items: center;
     gap: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .newsletter__label {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .newsletter__input {
+    width: 100%;
   }
 }
