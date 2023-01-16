@@ -2,11 +2,11 @@
   background-color: $main-background-color;
 
   &__box {
-    max-width: 1600px;
     background-image: linear-gradient(to top, $title-background-color, $title-background-color),
       url('../images/backgroundpic.jpg');
     background-position: center;
     margin: 0 auto;
+    background-size: cover;
   }
 
   &__container {
@@ -30,5 +30,15 @@
 
   &__button {
     @extend %button;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .title__box {
+    max-width: 1600px;
+  }
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .title__box {
+    background-image: url('../images/backgroundpic@2x.jpg');
   }
 }
