@@ -3,6 +3,7 @@
 
   &__box {
     display: flex;
+    flex-wrap: wrap;
     justify-items: space-between;
     gap: 70px;
   }
