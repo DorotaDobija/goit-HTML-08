@@ -500,7 +500,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 70px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -608,6 +607,7 @@ body {
   margin-top: 20px;
 }
 .newsletter__input {
+  width: 100%;
   max-width: 400px;
   height: 50px;
   background-color: #2f303a;
