@@ -285,7 +285,13 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 30px;
+}
+.text-list__item {
+  max-width: 450px;
 }
 .text-list__icon {
   display: -webkit-box;
@@ -294,9 +300,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-top: 25px;
   padding-bottom: 25px;
   background-color: #f5f4fa;
@@ -320,11 +323,13 @@ body {
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 768px) {
+  .text-list__item {
+    max-width: 354px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .text-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     padding: 0;
