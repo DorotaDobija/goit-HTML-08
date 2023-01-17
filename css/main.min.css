@@ -727,6 +727,7 @@ body {
 
 .modal {
   position: absolute;
+  min-width: 450px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
@@ -734,9 +735,8 @@ body {
           box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  width: 528px;
-  height: 581px;
-  top: 221px;
+  top: 93px;
+  margin: 0 15px;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -927,6 +927,17 @@ body {
   height: 15px;
 }
 
+@media screen and (min-width: 768px) {
+  .modal {
+    top: 208px;
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    top: 221px;
+  }
+}
 .button-list {
   display: -webkit-box;
   display: -ms-flexbox;
