@@ -1,14 +1,116 @@
 .menu-toggle {
   border: none;
   background-color: transparent;
+
+  &__close {
+    position: absolute;
+    top: 21px;
+    right: 26px;
+  }
+
+  &:hover,
+  &:focus {
+    fill: $focus-color;
+    cursor: pointer;
+  }
+}
+.is-open {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+.menu-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: $white-color;
+  top: 0;
+  left: 0;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  transition: visibility 300ms linear, opacity 300ms linear;
+
+  &__box-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__box.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: absolute;
+  top: 48px;
+  left: 40px;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 47px;
+  text-align: left;
+  letter-spacing: 0.02;
+
+  &__list-item {
+    text-decoration: none;
+    color: $brand-color;
+
+    &--active {
+      color: $focus-color;
+    }
+
+    &--border {
+      padding-right: 10px;
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+  }
+
+  &__tel-item {
+    position: absolute;
+    bottom: 194px;
+    left: 40px;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: left;
+    letter-spacing: 0.02;
+    color: $focus-color;
+  }
+
+  &__mail-item {
+    position: absolute;
+    bottom: 134px;
+    left: 40px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: left;
+    letter-spacing: 0.02;
+    color: $secondary-color;
+  }
+
+  &__social-item {
+    position: absolute;
+    bottom: 48px;
+    left: 40px;
+    display: flex;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: left;
+    letter-spacing: 0.02;
+    color: $focus-color;
+    gap: 10px;
+  }
 }
 @media screen and (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
-}
-.mobile-menu {
-  display: none;
+  .menu-container {
+    display: none;
+  }
 }
