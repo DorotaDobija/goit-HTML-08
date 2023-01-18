@@ -289,6 +289,39 @@
         </ul>
       </div>
     </main>
+    <!-- MOBILE MENU -->
+    <div class="menu-container js-menu-container is-open" id="mobile-menu">
+      <div class="menu-container__box">
+        <button class="menu-toggle js-close-menu menu-toggle__close">
+          <svg width="40" height="40">
+            <use href="images/icons.svg#icon-close_40px"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu list">
+          <li>
+            <a
+              class="mobile-menu__list-item mobile-menu__list-item--active"
+              href="index.html"
+              class="link"
+              >Agencja</a
+            >
+          </li>
+          <li>
+            <a class="mobile-menu__list-item" href="portfolio.html" class="link">Portfolio</a>
+          </li>
+          <li><a class="mobile-menu__list-item" href="#" class="link">Kontakt</a></li>
+        </ul>
+        <div class="mobile-menu__tel-item">+48 111 111 111</div>
+        <div class="mobile-menu__mail-item">info@devstudio.com</div>
+        <ul class="mobile-menu__social-item list">
+          <li class="mobile-menu__list-item--border">Instagram</li>
+          <li class="mobile-menu__list-item--border">Twitter</li>
+          <li class="mobile-menu__list-item--border">Facebook</li>
+          <li>LinkedIn</li>
+        </ul>
+      </div>
+    </div>
+
     <!-- FOOTER BOX -->
     <footer class="footer-section">
       <section class="container footer-section__box">
@@ -387,5 +420,12 @@
         </div>
       </section>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
