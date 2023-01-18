@@ -8,13 +8,12 @@
     gap: 70px;
     padding-bottom: 60px;
   }
+  &__logo {
+    padding-top: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
-.footer-logo {
-  padding-top: 60px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
 .logo {
   font-family: $secondary-font-family;
   font-weight: 700;
@@ -25,9 +24,9 @@
   &__web {
     color: $focus-color;
   }
-}
-.page-footer-logo {
-  color: $white-color;
+  &__footer {
+    color: $white-color;
+  }
 }
 .contact-list {
   font-size: 14px;
@@ -39,7 +38,7 @@
     margin-bottom: 9px;
   }
 }
-.contact-box__footer-links {
+.contact-list__item-links {
   font-family: $main-font-family;
   font-weight: 500;
   font-size: 14px;
@@ -141,10 +140,10 @@
   .footer-header {
     text-align: left;
   }
-  .footer-logo {
+  .footer-section__logo {
     text-align: left;
   }
-  .contact-box__footer-links {
+  .contact-list__item-links {
     justify-content: flex-start;
   }
   .footer-section__box {
