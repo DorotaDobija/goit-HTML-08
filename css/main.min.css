@@ -545,7 +545,7 @@ body {
 .logo__web {
   color: #2196f3;
 }
-.logo__footer {
+.logo--footer {
   color: #ffffff;
 }
 
@@ -555,10 +555,9 @@ body {
   letter-spacing: 0.03em;
   color: #ffffff;
 }
-.contact-list__item {
+.contact-list__item, .contact-list__item-links {
   margin-bottom: 9px;
 }
-
 .contact-list__item-links {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
