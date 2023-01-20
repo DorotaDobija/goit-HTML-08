@@ -14,20 +14,15 @@
     text-align: center;
   }
 }
-.logo {
-  font-family: $secondary-font-family;
-  font-weight: 700;
-  font-size: 26px;
-  text-decoration: none;
-  color: $black-color;
+.footer-logo {
+  @extend .logo;
+  color: $white-color;
 
   &__web {
     color: $focus-color;
   }
-  &--footer {
-    color: $white-color;
-  }
 }
+
 .contact-list {
   font-size: 14px;
   line-height: 1.71;
